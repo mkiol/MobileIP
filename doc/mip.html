@@ -1,0 +1,531 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module mip</title>
+<meta charset="utf-8">
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>mip</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:/home/mkiol/Pulpit/rapid/mip.py">/home/mkiol/Pulpit/rapid/mip.py</a></font></td></tr></table>
+    <p><tt>Mobile&nbsp;IP&nbsp;implementation.<br>
+&nbsp;<br>
+Implementation&nbsp;of&nbsp;the&nbsp;Mobile&nbsp;IP&nbsp;protocol,&nbsp;Home&nbsp;Agent&nbsp;and<br>
+Mobile&nbsp;Node&nbsp;Agent&nbsp;for&nbsp;Linux.</tt></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="hmac.html">hmac</a><br>
+<a href="logging.html">logging</a><br>
+</td><td width="25%" valign=top><a href="os.html">os</a><br>
+<a href="socket.html">socket</a><br>
+</td><td width="25%" valign=top><a href="struct.html">struct</a><br>
+<a href="sys.html">sys</a><br>
+</td><td width="25%" valign=top><a href="threading.html">threading</a><br>
+<a href="time.html">time</a><br>
+</td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ee77aa">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Classes</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl>
+<dt><font face="helvetica, arial"><a href="exceptions.html#Exception">exceptions.Exception</a>(<a href="exceptions.html#BaseException">exceptions.BaseException</a>)
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="mip.html#Error">Error</a>
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="mip.html#RegistrationFailed">RegistrationFailed</a>
+</font></dt></dl>
+</dd>
+</dl>
+</dd>
+<dt><font face="helvetica, arial"><a href="mip.html#Extension">Extension</a>
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="mip.html#MobileHomeAuthExtension">MobileHomeAuthExtension</a>
+</font></dt></dl>
+</dd>
+<dt><font face="helvetica, arial"><a href="mip.html#HomeAgent">HomeAgent</a>
+</font></dt><dt><font face="helvetica, arial"><a href="mip.html#MobileNodeAgent">MobileNodeAgent</a>
+</font></dt><dt><font face="helvetica, arial"><a href="mip.html#Packet">Packet</a>
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="mip.html#RegReplyPacket">RegReplyPacket</a>
+</font></dt><dt><font face="helvetica, arial"><a href="mip.html#RegRequestPacket">RegRequestPacket</a>
+</font></dt></dl>
+</dd>
+</dl>
+ <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="Error">class <strong>Error</strong></a>(<a href="exceptions.html#Exception">exceptions.Exception</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>Unspecified&nbsp;exception&nbsp;raised&nbsp;by&nbsp;MIP&nbsp;module.<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="mip.html#Error">Error</a></dd>
+<dd><a href="exceptions.html#Exception">exceptions.Exception</a></dd>
+<dd><a href="exceptions.html#BaseException">exceptions.BaseException</a></dd>
+<dd><a href="__builtin__.html#object">__builtin__.object</a></dd>
+</dl>
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<hr>
+Methods inherited from <a href="exceptions.html#Exception">exceptions.Exception</a>:<br>
+<dl><dt><a name="Error-__init__"><strong>__init__</strong></a>(...)</dt><dd><tt>x.<a href="#Error-__init__">__init__</a>(...)&nbsp;initializes&nbsp;x;&nbsp;see&nbsp;help(type(x))&nbsp;for&nbsp;signature</tt></dd></dl>
+
+<hr>
+Data and other attributes inherited from <a href="exceptions.html#Exception">exceptions.Exception</a>:<br>
+<dl><dt><strong>__new__</strong> = &lt;built-in method __new__ of type object&gt;<dd><tt>T.<a href="#Error-__new__">__new__</a>(S,&nbsp;...)&nbsp;-&gt;&nbsp;a&nbsp;new&nbsp;object&nbsp;with&nbsp;type&nbsp;S,&nbsp;a&nbsp;subtype&nbsp;of&nbsp;T</tt></dl>
+
+<hr>
+Methods inherited from <a href="exceptions.html#BaseException">exceptions.BaseException</a>:<br>
+<dl><dt><a name="Error-__delattr__"><strong>__delattr__</strong></a>(...)</dt><dd><tt>x.<a href="#Error-__delattr__">__delattr__</a>('name')&nbsp;&lt;==&gt;&nbsp;del&nbsp;x.name</tt></dd></dl>
+
+<dl><dt><a name="Error-__getattribute__"><strong>__getattribute__</strong></a>(...)</dt><dd><tt>x.<a href="#Error-__getattribute__">__getattribute__</a>('name')&nbsp;&lt;==&gt;&nbsp;x.name</tt></dd></dl>
+
+<dl><dt><a name="Error-__getitem__"><strong>__getitem__</strong></a>(...)</dt><dd><tt>x.<a href="#Error-__getitem__">__getitem__</a>(y)&nbsp;&lt;==&gt;&nbsp;x[y]</tt></dd></dl>
+
+<dl><dt><a name="Error-__getslice__"><strong>__getslice__</strong></a>(...)</dt><dd><tt>x.<a href="#Error-__getslice__">__getslice__</a>(i,&nbsp;j)&nbsp;&lt;==&gt;&nbsp;x[i:j]<br>
+&nbsp;<br>
+Use&nbsp;of&nbsp;negative&nbsp;indices&nbsp;is&nbsp;not&nbsp;supported.</tt></dd></dl>
+
+<dl><dt><a name="Error-__reduce__"><strong>__reduce__</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Error-__repr__"><strong>__repr__</strong></a>(...)</dt><dd><tt>x.<a href="#Error-__repr__">__repr__</a>()&nbsp;&lt;==&gt;&nbsp;repr(x)</tt></dd></dl>
+
+<dl><dt><a name="Error-__setattr__"><strong>__setattr__</strong></a>(...)</dt><dd><tt>x.<a href="#Error-__setattr__">__setattr__</a>('name',&nbsp;value)&nbsp;&lt;==&gt;&nbsp;x.name&nbsp;=&nbsp;value</tt></dd></dl>
+
+<dl><dt><a name="Error-__setstate__"><strong>__setstate__</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Error-__str__"><strong>__str__</strong></a>(...)</dt><dd><tt>x.<a href="#Error-__str__">__str__</a>()&nbsp;&lt;==&gt;&nbsp;str(x)</tt></dd></dl>
+
+<dl><dt><a name="Error-__unicode__"><strong>__unicode__</strong></a>(...)</dt></dl>
+
+<hr>
+Data descriptors inherited from <a href="exceptions.html#BaseException">exceptions.BaseException</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+</dl>
+<dl><dt><strong>args</strong></dt>
+</dl>
+<dl><dt><strong>message</strong></dt>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="Extension">class <strong>Extension</strong></a></font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>Mobile&nbsp;IP&nbsp;<a href="#Extension">Extension</a>&nbsp;class.<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="Extension-__init__"><strong>__init__</strong></a>(self, type, length, data<font color="#909090">=None</font>)</dt><dd><tt>MIP&nbsp;<a href="#Extension">Extension</a>&nbsp;constructor.<br>
+&nbsp;<br>
+Parameters:<br>
+type&nbsp;&nbsp;&nbsp;&nbsp;--&nbsp;type&nbsp;of&nbsp;extension&nbsp;(e.g.&nbsp;<a href="#Extension">Extension</a>.TYPE_MHAE)<br>
+length&nbsp;&nbsp;--&nbsp;lenght&nbsp;of&nbsp;data&nbsp;(number&nbsp;of&nbsp;bytes)&nbsp;in&nbsp;the&nbsp;extension<br>
+data&nbsp;&nbsp;&nbsp;&nbsp;--&nbsp;data&nbsp;in&nbsp;the&nbsp;extension&nbsp;(optional)</tt></dd></dl>
+
+<dl><dt><a name="Extension-__str__"><strong>__str__</strong></a>(self)</dt></dl>
+
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>TYPE_FHAE</strong> = 34</dl>
+
+<dl><dt><strong>TYPE_MFAE</strong> = 33</dl>
+
+<dl><dt><strong>TYPE_MHAE</strong> = 32</dl>
+
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="HomeAgent">class <strong>HomeAgent</strong></a></font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>Mobile&nbsp;IP&nbsp;Home&nbsp;Agent&nbsp;class.<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="HomeAgent-__del__"><strong>__del__</strong></a>()</dt><dd><tt>Home&nbsp;Agent&nbsp;destructor</tt></dd></dl>
+
+<dl><dt><a name="HomeAgent-__init__"><strong>__init__</strong></a>(self, auth_table, address<font color="#909090">='0.0.0.0'</font>, port<font color="#909090">=434</font>, max_lifetime<font color="#909090">=65535</font>, max_ident_mismatch<font color="#909090">=7</font>, ip_pool<font color="#909090">='172.16.0.0/24'</font>)</dt><dd><tt>Home&nbsp;Agent&nbsp;constructor.<br>
+&nbsp;<br>
+Parameters:<br>
+auth_table&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--&nbsp;dict&nbsp;that&nbsp;conctains&nbsp;SPIs&nbsp;as&nbsp;keys&nbsp;and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;authorization&nbsp;keys&nbsp;as&nbsp;values<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(e.g.&nbsp;{256:&nbsp;"1234567812345678"})<br>
+address&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--&nbsp;Home&nbsp;Agent&nbsp;binding&nbsp;IP&nbsp;address&nbsp;(default&nbsp;is&nbsp;0.0.0.0,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;HA&nbsp;will&nbsp;listen&nbsp;on&nbsp;all&nbsp;network&nbsp;interfaces)<br>
+port&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--&nbsp;Home&nbsp;Agent&nbsp;listening&nbsp;UDP&nbsp;port&nbsp;number&nbsp;(default&nbsp;is&nbsp;434)<br>
+max_lifetime&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--&nbsp;maximum&nbsp;acceptable&nbsp;Lifetime&nbsp;for&nbsp;registration<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(default&nbsp;is&nbsp;INFINITE_LIFETIME)<br>
+max_ident_mismatch&nbsp;--&nbsp;accepted&nbsp;timestamp&nbsp;mismatch&nbsp;in&nbsp;seconds&nbsp;for<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;identification&nbsp;(default&nbsp;is&nbsp;7)<br>
+ip_pool&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--&nbsp;IP&nbsp;pool&nbsp;used&nbsp;for&nbsp;tunnel&nbsp;interfaces<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(default&nbsp;is&nbsp;172.16.0.0/24)</tt></dd></dl>
+
+<dl><dt><a name="HomeAgent-start"><strong>start</strong></a>(self)</dt><dd><tt>Start&nbsp;Home&nbsp;Agent&nbsp;server&nbsp;listening.</tt></dd></dl>
+
+<dl><dt><a name="HomeAgent-stop"><strong>stop</strong></a>(self)</dt><dd><tt>Stop&nbsp;Home&nbsp;Agent&nbsp;server&nbsp;listening.</tt></dd></dl>
+
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="MobileHomeAuthExtension">class <strong>MobileHomeAuthExtension</strong></a>(<a href="mip.html#Extension">Extension</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>Mobile&nbsp;IP&nbsp;Mobile-Home&nbsp;Authentication&nbsp;<a href="#Extension">Extension</a>&nbsp;class&nbsp;for&nbsp;128-bit<br>
+HMAC-MD5.<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="MobileHomeAuthExtension-__init__"><strong>__init__</strong></a>(self, spi, authenticator<font color="#909090">=None</font>)</dt><dd><tt>MHAE&nbsp;constructor.<br>
+&nbsp;<br>
+Parameters:<br>
+spi&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--&nbsp;SPI&nbsp;value<br>
+authenticator&nbsp;--&nbsp;Authentication&nbsp;data&nbsp;(optional)</tt></dd></dl>
+
+<dl><dt><a name="MobileHomeAuthExtension-__str__"><strong>__str__</strong></a>(self)</dt></dl>
+
+<hr>
+Data and other attributes inherited from <a href="mip.html#Extension">Extension</a>:<br>
+<dl><dt><strong>TYPE_FHAE</strong> = 34</dl>
+
+<dl><dt><strong>TYPE_MFAE</strong> = 33</dl>
+
+<dl><dt><strong>TYPE_MHAE</strong> = 32</dl>
+
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="MobileNodeAgent">class <strong>MobileNodeAgent</strong></a></font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>Mobile&nbsp;IP&nbsp;Mobile&nbsp;Node&nbsp;agent<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="MobileNodeAgent-__del__"><strong>__del__</strong></a>(self)</dt><dd><tt>Mobile&nbsp;Node&nbsp;Agent&nbsp;destructor</tt></dd></dl>
+
+<dl><dt><a name="MobileNodeAgent-__init__"><strong>__init__</strong></a>(self, mhae_spi, mhae_key, home_agent, home_address, interfaces, port<font color="#909090">=434</font>, flags<font color="#909090">=42</font>, timeout<font color="#909090">=3</font>, num_of_retr<font color="#909090">=2</font>, rereg_time<font color="#909090">=0.8</font>, wait_for_dereg_reply<font color="#909090">=True</font>)</dt><dd><tt>Mobile&nbsp;Node&nbsp;Agent&nbsp;constructor.<br>
+&nbsp;<br>
+Parameters:<br>
+mhae_spi&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--&nbsp;SPI&nbsp;value&nbsp;needed&nbsp;for&nbsp;MHAE&nbsp;calculation&nbsp;(integer)<br>
+mhae_key&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--&nbsp;KEY&nbsp;value&nbsp;needed&nbsp;for&nbsp;MHAE&nbsp;calculation&nbsp;(string)<br>
+home_agent&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--&nbsp;Home&nbsp;Agent&nbsp;IP&nbsp;address&nbsp;(dot&nbsp;notation)<br>
+home_address&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--&nbsp;Home&nbsp;IP&nbsp;address&nbsp;(dot&nbsp;notation)<br>
+interfaces&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--&nbsp;dict&nbsp;that&nbsp;conctains&nbsp;interface&nbsp;names&nbsp;as&nbsp;keys<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;and&nbsp;default&nbsp;gateway&nbsp;IP&nbsp;addresses&nbsp;as&nbsp;values<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(e.g.&nbsp;{"eth0":&nbsp;"10.1.2.5",&nbsp;"wlan0":&nbsp;"10.1.3.5"})<br>
+port&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--&nbsp;Home&nbsp;Agent&nbsp;service&nbsp;UDP&nbsp;port&nbsp;number&nbsp;(default&nbsp;is&nbsp;434)<br>
+flags&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--&nbsp;flags&nbsp;included&nbsp;in&nbsp;MIP&nbsp;requests<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(default&nbsp;is&nbsp;FLAG_D&nbsp;|&nbsp;FLAG_G&nbsp;|&nbsp;FLAG_T)<br>
+timeout&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--&nbsp;maximum&nbsp;waiting&nbsp;time&nbsp;(seconds)&nbsp;for<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;the&nbsp;HA&nbsp;response&nbsp;(default&nbsp;is&nbsp;3)<br>
+num_of_retr&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--&nbsp;number&nbsp;of&nbsp;request&nbsp;retries&nbsp;(default&nbsp;is&nbsp;2)<br>
+rereg_time&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--&nbsp;requested&nbsp;time&nbsp;of&nbsp;reregistration,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;e.g.&nbsp;0.5&nbsp;means&nbsp;that&nbsp;reregistraton&nbsp;will&nbsp;be<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;after&nbsp;0.5*lifetime&nbsp;value&nbsp;(default&nbsp;is&nbsp;0.8)<br>
+wait_for_dereg_reply&nbsp;--&nbsp;indicator&nbsp;if&nbsp;agent&nbsp;should&nbsp;wait&nbsp;for<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;deregistration&nbsp;reply&nbsp;form&nbsp;HA&nbsp;(default&nbsp;is&nbsp;True)</tt></dd></dl>
+
+<dl><dt><a name="MobileNodeAgent-cancel"><strong>cancel</strong></a>(self)</dt><dd><tt>Cancel&nbsp;any&nbsp;ongoing&nbsp;registrations&nbsp;or&nbsp;registration&nbsp;attempts.</tt></dd></dl>
+
+<dl><dt><a name="MobileNodeAgent-deregister"><strong>deregister</strong></a>(self, ifname<font color="#909090">=None</font>, wait_for_reply<font color="#909090">=None</font>)</dt><dd><tt>Deregister&nbsp;Mobile&nbsp;Node&nbsp;Agent.<br>
+&nbsp;<br>
+Parameters:<br>
+ifname&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--&nbsp;name&nbsp;of&nbsp;network&nbsp;interface&nbsp;for&nbsp;the&nbsp;deregistration,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;not&nbsp;provided&nbsp;ifname&nbsp;will&nbsp;the&nbsp;same&nbsp;as&nbsp;for<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;the&nbsp;registration&nbsp;(optional)<br>
+wait_for_reply&nbsp;--&nbsp;if&nbsp;True,&nbsp;positive&nbsp;reply&nbsp;from&nbsp;Home&nbsp;Agent&nbsp;is&nbsp;required<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;to&nbsp;accept&nbsp;deregistration&nbsp;(optional)</tt></dd></dl>
+
+<dl><dt><a name="MobileNodeAgent-get_status"><strong>get_status</strong></a>(self)</dt><dd><tt>Return&nbsp;status&nbsp;information.</tt></dd></dl>
+
+<dl><dt><a name="MobileNodeAgent-is_registered"><strong>is_registered</strong></a>(self)</dt><dd><tt>Return&nbsp;True&nbsp;if&nbsp;agent&nbsp;is&nbsp;already&nbsp;registered.</tt></dd></dl>
+
+<dl><dt><a name="MobileNodeAgent-register"><strong>register</strong></a>(self, care_of_address<font color="#909090">=None</font>, dereg_existing_reg<font color="#909090">=True</font>, lifetime<font color="#909090">=65535</font>, ifname<font color="#909090">=None</font>, exception_handler<font color="#909090">=None</font>)</dt><dd><tt>Register&nbsp;Mobile&nbsp;Node&nbsp;Agent&nbsp;in&nbsp;Home&nbsp;Agent.<br>
+&nbsp;<br>
+Parameters:<br>
+care_of_address&nbsp;&nbsp;&nbsp;&nbsp;--&nbsp;Care-of&nbsp;IP&nbsp;address&nbsp;(optional&nbsp;if&nbsp;ifname&nbsp;is&nbsp;provided)<br>
+dereg_existing_reg&nbsp;--&nbsp;if&nbsp;True,&nbsp;deregistration&nbsp;will&nbsp;be&nbsp;done<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;before&nbsp;new&nbsp;registration&nbsp;(default&nbsp;is&nbsp;True)<br>
+lifetime&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--&nbsp;registration&nbsp;lifetime&nbsp;value<br>
+ifname&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--&nbsp;name&nbsp;of&nbsp;network&nbsp;interface&nbsp;for&nbsp;the&nbsp;registration<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(optional&nbsp;if&nbsp;care_of_address&nbsp;is&nbsp;provided)<br>
+exception_handler&nbsp;&nbsp;--&nbsp;function&nbsp;that&nbsp;will&nbsp;be&nbsp;called&nbsp;when&nbsp;exception<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;occures&nbsp;in&nbsp;Mobile&nbsp;Node&nbsp;Agent&nbsp;thread</tt></dd></dl>
+
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="Packet">class <strong>Packet</strong></a></font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>Mobile&nbsp;IP&nbsp;packet&nbsp;class.<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="Packet-__init__"><strong>__init__</strong></a>(self, type, extensions<font color="#909090">=None</font>)</dt><dd><tt>MIP&nbsp;packet&nbsp;constructor.<br>
+&nbsp;<br>
+Parameters:<br>
+type&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--&nbsp;type&nbsp;of&nbsp;MIP&nbsp;packet&nbsp;(e.g.&nbsp;<a href="#Packet">Packet</a>.TYPE_REG_REQUEST)<br>
+extensions&nbsp;--&nbsp;list&nbsp;of&nbsp;MIP&nbsp;extensions&nbsp;(optional)</tt></dd></dl>
+
+<dl><dt><a name="Packet-__str__"><strong>__str__</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Packet-add_mhae"><strong>add_mhae</strong></a>(self, spi, key)</dt><dd><tt>Create&nbsp;and&nbsp;add&nbsp;MHAE&nbsp;extension&nbsp;to&nbsp;this&nbsp;packet<br>
+with&nbsp;given&nbsp;SPI&nbsp;and&nbsp;KEY.</tt></dd></dl>
+
+<dl><dt><a name="Packet-get_mhae"><strong>get_mhae</strong></a>(self)</dt><dd><tt>Return&nbsp;MHAE&nbsp;extension&nbsp;form&nbsp;this&nbsp;packet.</tt></dd></dl>
+
+<dl><dt><a name="Packet-to_data"><strong>to_data</strong></a>(self)</dt><dd><tt>Return&nbsp;byte&nbsp;array&nbsp;representation&nbsp;of&nbsp;the&nbsp;packet.</tt></dd></dl>
+
+<dl><dt><a name="Packet-verify_mhae"><strong>verify_mhae</strong></a>(self, spi, key)</dt><dd><tt>Return&nbsp;True&nbsp;if&nbsp;MHAE&nbsp;extension&nbsp;in&nbsp;this&nbsp;packet&nbsp;is&nbsp;valid<br>
+for&nbsp;given&nbsp;SPI&nbsp;and&nbsp;KEY.</tt></dd></dl>
+
+<hr>
+Static methods defined here:<br>
+<dl><dt><a name="Packet-from_data"><strong>from_data</strong></a>(data)</dt><dd><tt>Create&nbsp;and&nbsp;return&nbsp;MIP&nbsp;packet&nbsp;based&nbsp;on&nbsp;given&nbsp;byte&nbsp;data.</tt></dd></dl>
+
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>TYPE_REG_REPLY</strong> = 3</dl>
+
+<dl><dt><strong>TYPE_REG_REQUEST</strong> = 1</dl>
+
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="RegReplyPacket">class <strong>RegReplyPacket</strong></a>(<a href="mip.html#Packet">Packet</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>Mobile&nbsp;IP&nbsp;Registration&nbsp;Reply&nbsp;packet&nbsp;class.<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="RegReplyPacket-__init__"><strong>__init__</strong></a>(self, code, lifetime, home_address, home_agent, identification, extensions<font color="#909090">=None</font>)</dt><dd><tt>MIP&nbsp;Registration&nbsp;Reply&nbsp;constructor.<br>
+&nbsp;<br>
+Parameters:<br>
+code&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--&nbsp;code&nbsp;of&nbsp;the&nbsp;reply&nbsp;(e.g.&nbsp;<a href="#RegReplyPacket">RegReplyPacket</a>.CODE_ACCEPTED)<br>
+lifetime&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--&nbsp;Lifetime&nbsp;value<br>
+home_address&nbsp;&nbsp;&nbsp;&nbsp;--&nbsp;Home&nbsp;IP&nbsp;address&nbsp;(dot&nbsp;notation)<br>
+home_agent&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--&nbsp;Home&nbsp;Agent&nbsp;IP&nbsp;address&nbsp;(dot&nbsp;notation)<br>
+identification&nbsp;&nbsp;--&nbsp;Identification&nbsp;value<br>
+extensions&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--&nbsp;list&nbsp;of&nbsp;MIP&nbsp;extensions</tt></dd></dl>
+
+<dl><dt><a name="RegReplyPacket-__str__"><strong>__str__</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="RegReplyPacket-to_data"><strong>to_data</strong></a>(self)</dt><dd><tt>Return&nbsp;byte&nbsp;array&nbsp;representation&nbsp;of&nbsp;the&nbsp;MIP&nbsp;reply.</tt></dd></dl>
+
+<hr>
+Static methods defined here:<br>
+<dl><dt><a name="RegReplyPacket-from_data"><strong>from_data</strong></a>(data)</dt><dd><tt>Create&nbsp;and&nbsp;return&nbsp;MIP&nbsp;Registration&nbsp;Reply<br>
+based&nbsp;on&nbsp;given&nbsp;byte&nbsp;data.</tt></dd></dl>
+
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>CODE_ACCEPTED</strong> = 0</dl>
+
+<dl><dt><strong>CODE_DENIED_BY_FA</strong> = 64</dl>
+
+<dl><dt><strong>CODE_DENIED_BY_HA</strong> = 128</dl>
+
+<dl><dt><strong>CODE_IDENT_MISMATCH</strong> = 133</dl>
+
+<dl><dt><strong>CODE_MN_FAILED_AUTH</strong> = 131</dl>
+
+<hr>
+Methods inherited from <a href="mip.html#Packet">Packet</a>:<br>
+<dl><dt><a name="RegReplyPacket-add_mhae"><strong>add_mhae</strong></a>(self, spi, key)</dt><dd><tt>Create&nbsp;and&nbsp;add&nbsp;MHAE&nbsp;extension&nbsp;to&nbsp;this&nbsp;packet<br>
+with&nbsp;given&nbsp;SPI&nbsp;and&nbsp;KEY.</tt></dd></dl>
+
+<dl><dt><a name="RegReplyPacket-get_mhae"><strong>get_mhae</strong></a>(self)</dt><dd><tt>Return&nbsp;MHAE&nbsp;extension&nbsp;form&nbsp;this&nbsp;packet.</tt></dd></dl>
+
+<dl><dt><a name="RegReplyPacket-verify_mhae"><strong>verify_mhae</strong></a>(self, spi, key)</dt><dd><tt>Return&nbsp;True&nbsp;if&nbsp;MHAE&nbsp;extension&nbsp;in&nbsp;this&nbsp;packet&nbsp;is&nbsp;valid<br>
+for&nbsp;given&nbsp;SPI&nbsp;and&nbsp;KEY.</tt></dd></dl>
+
+<hr>
+Data and other attributes inherited from <a href="mip.html#Packet">Packet</a>:<br>
+<dl><dt><strong>TYPE_REG_REPLY</strong> = 3</dl>
+
+<dl><dt><strong>TYPE_REG_REQUEST</strong> = 1</dl>
+
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="RegRequestPacket">class <strong>RegRequestPacket</strong></a>(<a href="mip.html#Packet">Packet</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>Mobile&nbsp;IP&nbsp;Registration&nbsp;Request&nbsp;packet&nbsp;class.<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="RegRequestPacket-__init__"><strong>__init__</strong></a>(self, flags, lifetime, home_address, home_agent, care_of_address, identification<font color="#909090">=None</font>, extensions<font color="#909090">=None</font>)</dt><dd><tt>MIP&nbsp;Registration&nbsp;Request&nbsp;constructor.<br>
+&nbsp;<br>
+Parameters:<br>
+flags&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--&nbsp;flags&nbsp;that&nbsp;will&nbsp;be&nbsp;included&nbsp;in&nbsp;to&nbsp;request<br>
+lifetime&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--&nbsp;Lifetime&nbsp;value<br>
+home_address&nbsp;&nbsp;&nbsp;&nbsp;--&nbsp;Home&nbsp;IP&nbsp;address&nbsp;(dot&nbsp;notation)<br>
+home_agent&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--&nbsp;Home&nbsp;Agent&nbsp;IP&nbsp;address&nbsp;(dot&nbsp;notation)<br>
+care_of_address&nbsp;--&nbsp;Care-of&nbsp;IP&nbsp;address&nbsp;(dot&nbsp;notation)<br>
+identification&nbsp;&nbsp;--&nbsp;Identification&nbsp;value<br>
+extensions&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--&nbsp;list&nbsp;of&nbsp;MIP&nbsp;extensions</tt></dd></dl>
+
+<dl><dt><a name="RegRequestPacket-__str__"><strong>__str__</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="RegRequestPacket-is_update_request"><strong>is_update_request</strong></a>(self, reg_req_packet)</dt><dd><tt>Return&nbsp;True&nbsp;if&nbsp;given&nbsp;Registration&nbsp;Request&nbsp;packet&nbsp;is&nbsp;an&nbsp;update.</tt></dd></dl>
+
+<dl><dt><a name="RegRequestPacket-to_data"><strong>to_data</strong></a>(self)</dt><dd><tt>Return&nbsp;byte&nbsp;array&nbsp;representation&nbsp;of&nbsp;the&nbsp;MIP&nbsp;request.</tt></dd></dl>
+
+<dl><dt><a name="RegRequestPacket-update_identification"><strong>update_identification</strong></a>(self)</dt><dd><tt>Update&nbsp;Identification&nbsp;value&nbsp;in&nbsp;the&nbsp;request.</tt></dd></dl>
+
+<hr>
+Static methods defined here:<br>
+<dl><dt><a name="RegRequestPacket-from_data"><strong>from_data</strong></a>(data)</dt><dd><tt>Create&nbsp;and&nbsp;return&nbsp;MIP&nbsp;Registration&nbsp;Request<br>
+based&nbsp;on&nbsp;given&nbsp;byte&nbsp;data.</tt></dd></dl>
+
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>FLAG_B</strong> = 64</dl>
+
+<dl><dt><strong>FLAG_D</strong> = 32</dl>
+
+<dl><dt><strong>FLAG_G</strong> = 8</dl>
+
+<dl><dt><strong>FLAG_M</strong> = 16</dl>
+
+<dl><dt><strong>FLAG_S</strong> = 128</dl>
+
+<dl><dt><strong>FLAG_T</strong> = 2</dl>
+
+<dl><dt><strong>FLAG_r</strong> = 4</dl>
+
+<dl><dt><strong>FLAG_x</strong> = 1</dl>
+
+<hr>
+Methods inherited from <a href="mip.html#Packet">Packet</a>:<br>
+<dl><dt><a name="RegRequestPacket-add_mhae"><strong>add_mhae</strong></a>(self, spi, key)</dt><dd><tt>Create&nbsp;and&nbsp;add&nbsp;MHAE&nbsp;extension&nbsp;to&nbsp;this&nbsp;packet<br>
+with&nbsp;given&nbsp;SPI&nbsp;and&nbsp;KEY.</tt></dd></dl>
+
+<dl><dt><a name="RegRequestPacket-get_mhae"><strong>get_mhae</strong></a>(self)</dt><dd><tt>Return&nbsp;MHAE&nbsp;extension&nbsp;form&nbsp;this&nbsp;packet.</tt></dd></dl>
+
+<dl><dt><a name="RegRequestPacket-verify_mhae"><strong>verify_mhae</strong></a>(self, spi, key)</dt><dd><tt>Return&nbsp;True&nbsp;if&nbsp;MHAE&nbsp;extension&nbsp;in&nbsp;this&nbsp;packet&nbsp;is&nbsp;valid<br>
+for&nbsp;given&nbsp;SPI&nbsp;and&nbsp;KEY.</tt></dd></dl>
+
+<hr>
+Data and other attributes inherited from <a href="mip.html#Packet">Packet</a>:<br>
+<dl><dt><strong>TYPE_REG_REPLY</strong> = 3</dl>
+
+<dl><dt><strong>TYPE_REG_REQUEST</strong> = 1</dl>
+
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="RegistrationFailed">class <strong>RegistrationFailed</strong></a>(<a href="mip.html#Error">Error</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>Mobile&nbsp;Node&nbsp;Agent&nbsp;registration&nbsp;failed&nbsp;exception.<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="mip.html#RegistrationFailed">RegistrationFailed</a></dd>
+<dd><a href="mip.html#Error">Error</a></dd>
+<dd><a href="exceptions.html#Exception">exceptions.Exception</a></dd>
+<dd><a href="exceptions.html#BaseException">exceptions.BaseException</a></dd>
+<dd><a href="__builtin__.html#object">__builtin__.object</a></dd>
+</dl>
+<hr>
+Data descriptors inherited from <a href="mip.html#Error">Error</a>:<br>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<hr>
+Methods inherited from <a href="exceptions.html#Exception">exceptions.Exception</a>:<br>
+<dl><dt><a name="RegistrationFailed-__init__"><strong>__init__</strong></a>(...)</dt><dd><tt>x.<a href="#RegistrationFailed-__init__">__init__</a>(...)&nbsp;initializes&nbsp;x;&nbsp;see&nbsp;help(type(x))&nbsp;for&nbsp;signature</tt></dd></dl>
+
+<hr>
+Data and other attributes inherited from <a href="exceptions.html#Exception">exceptions.Exception</a>:<br>
+<dl><dt><strong>__new__</strong> = &lt;built-in method __new__ of type object&gt;<dd><tt>T.<a href="#RegistrationFailed-__new__">__new__</a>(S,&nbsp;...)&nbsp;-&gt;&nbsp;a&nbsp;new&nbsp;object&nbsp;with&nbsp;type&nbsp;S,&nbsp;a&nbsp;subtype&nbsp;of&nbsp;T</tt></dl>
+
+<hr>
+Methods inherited from <a href="exceptions.html#BaseException">exceptions.BaseException</a>:<br>
+<dl><dt><a name="RegistrationFailed-__delattr__"><strong>__delattr__</strong></a>(...)</dt><dd><tt>x.<a href="#RegistrationFailed-__delattr__">__delattr__</a>('name')&nbsp;&lt;==&gt;&nbsp;del&nbsp;x.name</tt></dd></dl>
+
+<dl><dt><a name="RegistrationFailed-__getattribute__"><strong>__getattribute__</strong></a>(...)</dt><dd><tt>x.<a href="#RegistrationFailed-__getattribute__">__getattribute__</a>('name')&nbsp;&lt;==&gt;&nbsp;x.name</tt></dd></dl>
+
+<dl><dt><a name="RegistrationFailed-__getitem__"><strong>__getitem__</strong></a>(...)</dt><dd><tt>x.<a href="#RegistrationFailed-__getitem__">__getitem__</a>(y)&nbsp;&lt;==&gt;&nbsp;x[y]</tt></dd></dl>
+
+<dl><dt><a name="RegistrationFailed-__getslice__"><strong>__getslice__</strong></a>(...)</dt><dd><tt>x.<a href="#RegistrationFailed-__getslice__">__getslice__</a>(i,&nbsp;j)&nbsp;&lt;==&gt;&nbsp;x[i:j]<br>
+&nbsp;<br>
+Use&nbsp;of&nbsp;negative&nbsp;indices&nbsp;is&nbsp;not&nbsp;supported.</tt></dd></dl>
+
+<dl><dt><a name="RegistrationFailed-__reduce__"><strong>__reduce__</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="RegistrationFailed-__repr__"><strong>__repr__</strong></a>(...)</dt><dd><tt>x.<a href="#RegistrationFailed-__repr__">__repr__</a>()&nbsp;&lt;==&gt;&nbsp;repr(x)</tt></dd></dl>
+
+<dl><dt><a name="RegistrationFailed-__setattr__"><strong>__setattr__</strong></a>(...)</dt><dd><tt>x.<a href="#RegistrationFailed-__setattr__">__setattr__</a>('name',&nbsp;value)&nbsp;&lt;==&gt;&nbsp;x.name&nbsp;=&nbsp;value</tt></dd></dl>
+
+<dl><dt><a name="RegistrationFailed-__setstate__"><strong>__setstate__</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="RegistrationFailed-__str__"><strong>__str__</strong></a>(...)</dt><dd><tt>x.<a href="#RegistrationFailed-__str__">__str__</a>()&nbsp;&lt;==&gt;&nbsp;str(x)</tt></dd></dl>
+
+<dl><dt><a name="RegistrationFailed-__unicode__"><strong>__unicode__</strong></a>(...)</dt></dl>
+
+<hr>
+Data descriptors inherited from <a href="exceptions.html#BaseException">exceptions.BaseException</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+</dl>
+<dl><dt><strong>args</strong></dt>
+</dl>
+<dl><dt><strong>message</strong></dt>
+</dl>
+</td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#eeaa77">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Functions</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#eeaa77"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt><a name="-get_address"><strong>get_address</strong></a>(ifname)</dt><dd><tt>Search&nbsp;the&nbsp;interface&nbsp;with&nbsp;given&nbsp;name&nbsp;and&nbsp;return<br>
+interface&nbsp;IP&nbsp;address&nbsp;and&nbsp;subnet&nbsp;prefix&nbsp;lenght.</tt></dd></dl>
+ <dl><dt><a name="-get_ifname"><strong>get_ifname</strong></a>(address)</dt><dd><tt>Search&nbsp;the&nbsp;interface&nbsp;with&nbsp;given&nbsp;IP&nbsp;address&nbsp;and&nbsp;return<br>
+interface&nbsp;name&nbsp;and&nbsp;subnet&nbsp;prefix&nbsp;lenght.</tt></dd></dl>
+ <dl><dt><a name="-get_interfaces_states"><strong>get_interfaces_states</strong></a>(interfaces<font color="#909090">=None</font>)</dt><dd><tt>Return&nbsp;dict&nbsp;with&nbsp;state&nbsp;("UP"&nbsp;or&nbsp;"DOWN")&nbsp;of&nbsp;interfaces.&nbsp;Interface&nbsp;is<br>
+considered&nbsp;as&nbsp;"UP"&nbsp;if&nbsp;IP&nbsp;address&nbsp;is&nbsp;assigned.</tt></dd></dl>
+ <dl><dt><a name="-get_ip_forward"><strong>get_ip_forward</strong></a>()</dt><dd><tt>Return&nbsp;True&nbsp;if&nbsp;IP-Forward&nbsp;is&nbsp;enabled&nbsp;in&nbsp;the&nbsp;OS.</tt></dd></dl>
+ <dl><dt><a name="-get_proxy_arp"><strong>get_proxy_arp</strong></a>(ifname)</dt><dd><tt>Return&nbsp;True&nbsp;if&nbsp;Proxy-ARP&nbsp;is&nbsp;enabled&nbsp;in&nbsp;the&nbsp;OS&nbsp;for<br>
+the&nbsp;given&nbsp;interface&nbsp;name.</tt></dd></dl>
+ <dl><dt><a name="-int_to_ip"><strong>int_to_ip</strong></a>(value)</dt><dd><tt>Convert&nbsp;given&nbsp;IP&nbsp;address&nbsp;in&nbsp;integer&nbsp;representation&nbsp;to&nbsp;dot&nbsp;notation.</tt></dd></dl>
+ <dl><dt><a name="-ip_to_int"><strong>ip_to_int</strong></a>(value)</dt><dd><tt>Return&nbsp;integer&nbsp;representation&nbsp;of&nbsp;IP&nbsp;address&nbsp;given&nbsp;in&nbsp;dot&nbsp;notation.</tt></dd></dl>
+ <dl><dt><a name="-is_address_in_subnet"><strong>is_address_in_subnet</strong></a>(address, network)</dt><dd><tt>Return&nbsp;True&nbsp;if&nbsp;given&nbsp;IP&nbsp;address&nbsp;is&nbsp;within&nbsp;given&nbsp;network.</tt></dd></dl>
+ <dl><dt><a name="-is_address_reachable"><strong>is_address_reachable</strong></a>(address)</dt><dd><tt>Return&nbsp;True&nbsp;if&nbsp;given&nbsp;IP&nbsp;address&nbsp;belongs&nbsp;to&nbsp;any&nbsp;network&nbsp;configured<br>
+on&nbsp;the&nbsp;OS&nbsp;interfaces.</tt></dd></dl>
+ <dl><dt><a name="-set_ip_forward"><strong>set_ip_forward</strong></a>(value)</dt><dd><tt>Enable&nbsp;or&nbsp;disable&nbsp;IP-Forward&nbsp;in&nbsp;the&nbsp;OS.</tt></dd></dl>
+ <dl><dt><a name="-set_proxy_arp"><strong>set_proxy_arp</strong></a>(ifname, value)</dt><dd><tt>Enable&nbsp;or&nbsp;disable&nbsp;Proxy-ARP&nbsp;for&nbsp;given&nbsp;interface&nbsp;name&nbsp;in&nbsp;the&nbsp;OS.</tt></dd></dl>
+ <dl><dt><a name="-set_proxy_arp_for_all"><strong>set_proxy_arp_for_all</strong></a>(value)</dt><dd><tt>Enable&nbsp;or&nbsp;disable&nbsp;Proxy-ARP&nbsp;for&nbsp;all&nbsp;interfaces&nbsp;in&nbsp;the&nbsp;OS.</tt></dd></dl>
+ <dl><dt><a name="-str_to_hex"><strong>str_to_hex</strong></a>(string)</dt><dd><tt>Convert&nbsp;given&nbsp;string&nbsp;to&nbsp;hex&nbsp;string.</tt></dd></dl>
+</td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#55aa55">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Data</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#55aa55"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><strong>INFINITE_LIFETIME</strong> = 65535</td></tr></table>
+</body></html>
